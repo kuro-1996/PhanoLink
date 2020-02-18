@@ -3,8 +3,8 @@ $(document).ready(function () {
     $('.product__list').toggleClass('active'); // toggle product dropdown in desktop
   })
 
-  $(".product-nav__dropdown-btn").click(function () {
-    $(".product-nav__dropdown-menu").toggleClass('active'); // toggle product dropdown in mobile
+  $(".row__product-btn").click(function () {
+    $(".row__product-dropdown").toggleClass('active'); // toggle product dropdown in mobile
   });
 
   $(".row__menu-btn").click(function() {
