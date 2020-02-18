@@ -13,7 +13,7 @@ header {
   }
 
   .header__desktop {
-    padding: 13px 15px 18px 15px;
+    padding: 13px 15px 17px 15px;
     @media screen and (max-width: 767px) {
       display: none;
     }
@@ -23,7 +23,7 @@ header {
       justify-content: flex-end;
       @include font-size(12.1px);
       line-height: 12.88px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
 
       .info__item {
         @include flex;
@@ -96,15 +96,19 @@ header {
     .desktop__main {
       @include flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
       margin-bottom: 12px;
+
+      img {
+        padding-bottom: 4px;
+      }
 
       .main__search {
         width: 654px;
         height: 37px;
         @include border-radius(7px);
         overflow: hidden;
-        margin-left: 14px;
+        margin: 0 0 6px 14px;
         @include flex;
         @media screen and (max-width: 1199px) {
           width: 500px;
@@ -150,6 +154,7 @@ header {
         @include border-radius(7px);
         @include font-size(12.18px);
         @include flex;
+        margin-bottom: 6px;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease-in-out;
@@ -231,14 +236,11 @@ header {
             transform: translateY(-2em);
             @include border-radius-separate(0,0,5px,5px);
             transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
-            @media #{$info-phone-horizontal} {
+            @media #{$info-tablet-horizontal} {
               bottom: -164px;
             }
-            @media #{$info-phone-vertical} {
+            @media #{$info-tablet-vertical} {
               bottom: -160px;
-            }
-            @media screen and (max-width: 900px) {
-              bottom: -126px;
             }
 
             &.active {
@@ -360,40 +362,24 @@ header {
           @include border-radius();
           position: relative;
           display: block;
-
-          &::after , &::before {
-            content: '';
-            width: 25px;
-            height: 3px;
-            left: 0;
-            background-color: #fff;
-            @include border-radius();
-            position: absolute;
-            transition: background-color .5s linear;
+          margin-bottom: 4px;
+          transition: all .3s ease-in-out;
+          &.bot {
+            margin: 0;
           }
+        }
 
-          &::before {
-            top: -7px;
-            transition: all .3s ease-in-out;
+        &.active {
+          .top {
+            margin: 0;
+            transform: translateY(3px) rotate(-45deg);
           }
-
-          &::after {
-            bottom: -7px;
-            transition: all .3s ease-in-out;
+          .mid {
+            margin: 0;
+            width: 0;
           }
-
-          &.active {
-            background-color: transparent;
-
-            &::before {
-              top: 0;
-              transform: rotate(45deg);
-            }
-
-            &::after {
-              bottom: 0;
-              transform: rotate(-45deg);
-            }
+          .bot {
+            transform: translateY(-3px) rotate(45deg);
           }
         }
       }

@@ -7574,7 +7574,7 @@ header a:hover {
 }
 
 header .header__desktop {
-  padding: 13px 15px 18px 15px;
+  padding: 13px 15px 17px 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -7593,7 +7593,7 @@ header .header__desktop .desktop__info {
   font-size: 12.1px;
   font-size: 0.75625rem;
   line-height: 12.88px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 header .header__desktop .desktop__info .info__item {
@@ -7676,10 +7676,14 @@ header .header__desktop .desktop__main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-bottom: 12px;
+}
+
+header .header__desktop .desktop__main img {
+  padding-bottom: 4px;
 }
 
 header .header__desktop .desktop__main .main__search {
@@ -7687,7 +7691,7 @@ header .header__desktop .desktop__main .main__search {
   height: 37px;
   border-radius: 7px;
   overflow: hidden;
-  margin-left: 14px;
+  margin: 0 0 6px 14px;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -7755,6 +7759,7 @@ header .header__desktop .desktop__main .main__button {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
+  margin-bottom: 6px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -7873,9 +7878,15 @@ header .header__desktop .desktop__nav .nav__item.product .product__list {
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
 }
 
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 1160px) {
   header .header__desktop .desktop__nav .nav__item.product .product__list {
-    bottom: -126px;
+    bottom: -164px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header .header__desktop .desktop__nav .nav__item.product .product__list {
+    bottom: -160px;
   }
 }
 
@@ -8048,46 +8059,29 @@ header .header__mobile .mobile__row .row__menu-btn i {
   border-radius: 5px;
   position: relative;
   display: block;
-}
-
-header .header__mobile .mobile__row .row__menu-btn i::after, header .header__mobile .mobile__row .row__menu-btn i::before {
-  content: '';
-  width: 25px;
-  height: 3px;
-  left: 0;
-  background-color: #fff;
-  border-radius: 5px;
-  position: absolute;
-  -webkit-transition: background-color .5s linear;
-  transition: background-color .5s linear;
-}
-
-header .header__mobile .mobile__row .row__menu-btn i::before {
-  top: -7px;
+  margin-bottom: 4px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-header .header__mobile .mobile__row .row__menu-btn i::after {
-  bottom: -7px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+header .header__mobile .mobile__row .row__menu-btn i.bot {
+  margin: 0;
 }
 
-header .header__mobile .mobile__row .row__menu-btn i.active {
-  background-color: transparent;
+header .header__mobile .mobile__row .row__menu-btn.active .top {
+  margin: 0;
+  -webkit-transform: translateY(3px) rotate(-45deg);
+          transform: translateY(3px) rotate(-45deg);
 }
 
-header .header__mobile .mobile__row .row__menu-btn i.active::before {
-  top: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+header .header__mobile .mobile__row .row__menu-btn.active .mid {
+  margin: 0;
+  width: 0;
 }
 
-header .header__mobile .mobile__row .row__menu-btn i.active::after {
-  bottom: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+header .header__mobile .mobile__row .row__menu-btn.active .bot {
+  -webkit-transform: translateY(-3px) rotate(45deg);
+          transform: translateY(-3px) rotate(45deg);
 }
 
 header .header__mobile .mobile__row .row__menu-dropdown {
@@ -8821,8 +8815,7 @@ footer .footer__info .info__content .content__assist {
 
 @media screen and (max-width: 991px) {
   footer .footer__info .info__content .content__assist {
-    width: calc(100% / 12 * 4);
-    padding-left: 0;
+    padding-left: 20px;
   }
 }
 
@@ -8902,7 +8895,7 @@ footer .footer__info .info__content .content__account {
 @media screen and (max-width: 991px) {
   footer .footer__info .info__content .content__account {
     width: calc(100% / 12 * 3);
-    padding-left: 0;
+    padding-left: 20px;
   }
 }
 

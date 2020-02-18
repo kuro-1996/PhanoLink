@@ -8,7 +8,7 @@ $(document).ready(function () {
   });
 
   $(".row__menu-btn").click(function() {
-		$(this).children('i').toggleClass("active"); // toggle menu button animate
+		$(this).toggleClass("active"); // toggle menu button animate
 		$(".row__menu-dropdown").toggleClass("active"); // toggle menu dropdown
   });
 })

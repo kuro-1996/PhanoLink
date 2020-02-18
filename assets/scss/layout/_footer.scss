@@ -235,8 +235,7 @@ footer {
         width: calc(100% / 12 * 3);
         padding: 14px 0 0 79px;
         @media screen and (max-width: 991px) {
-          width: calc(100% / 12 * 4);
-          padding-left: 0;
+          padding-left: 20px;
         } 
         @media screen and (max-width: 767px) {
           padding-top: 20px;
@@ -291,7 +290,7 @@ footer {
         padding: 14px 0 0 31px;
         @media screen and (max-width: 991px) {
           width: calc(100% / 12 * 3);
-          padding-left: 0;
+          padding-left: 20px;
         }
         @media screen and (max-width: 767px) {
           padding-top: 20px;
