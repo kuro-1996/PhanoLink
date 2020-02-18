@@ -57,3 +57,35 @@
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
+
+@font-face {
+  font-family: 'UTM Neo Sans Intel';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$fa-font-path}/UTMNeoSansIntel.eot') format('embedded-opentype'),
+  url('#{$fa-font-path}/UTMNeoSansIntel.woff2') format('woff2'),
+  url('#{$fa-font-path}/UTMNeoSansIntel.woff') format('woff'),
+  url('#{$fa-font-path}/UTM Neo Sans Intel.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UTM Neo Sans Intel Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: 
+  url('#{$fa-font-path}/UTMNeoSansIntelItalic.eot') format('embedded-opentype'),
+  url('#{$fa-font-path}/UTMNeoSansIntelItalic.woff') format('woff'),
+  url('#{$fa-font-path}/UTMNeoSansIntelItalic.woff2') format('woff2'),
+  url('#{$fa-font-path}/UTMNeoSansIntelItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UTM Neo Sans Intel Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: 
+  url('#{$fa-font-path}/UTMNeoSansIntelBold.eot') format('embedded-opentype'),
+  url('#{$fa-font-path}/UTMNeoSansIntelBold.woff') format('woff'),
+  url('#{$fa-font-path}/UTMNeoSansIntelBold.woff2') format('woff2'),
+  url('#{$fa-font-path}/UTM Neo Sans IntelBold.ttf') format('truetype');
+}
