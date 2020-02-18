@@ -154,6 +154,9 @@ footer {
         color: #595959;
         @include font-size(16.5px);
         margin-bottom: 35px;
+        @media screen and (max-width: 767px) {
+          margin-bottom: 31px;
+        }
         @media screen and (max-width: 575px) {
           margin-bottom: 20px;
         }

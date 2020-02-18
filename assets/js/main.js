@@ -1,19 +1,14 @@
 $(document).ready(function () {
   $('.product__title').click(function () {
-    $('.product__list').toggleClass('active');
+    $('.product__list').toggleClass('active'); // toggle product dropdown in desktop
   })
+
   $(".product-nav__dropdown-btn").click(function () {
-    $(".product-nav__dropdown-menu").toggleClass('active');
+    $(".product-nav__dropdown-menu").toggleClass('active'); // toggle product dropdown in mobile
   });
-  $(".wrap__menu-btn").click(function() {
-		$(this).children('i').toggleClass("active");
-		$(".wrap__menu-dropdown").toggleClass("active");
+
+  $(".row__menu-btn").click(function() {
+		$(this).children('i').toggleClass("active"); // toggle menu button animate
+		$(".row__menu-dropdown").toggleClass("active"); // toggle menu dropdown
   });
-  
-  // $(window).scroll(function () {
-  //   if ($(this).scrollTop() > $('.desktop__nav').offset().top)
-  //     $(".desktop__nav").addClass('active');
-  //   else if ($(this).scrollTop() <= $('.desktop__nav').offset().top)
-  //     $(".desktop__nav").removeClass("active");
-  // })
 })

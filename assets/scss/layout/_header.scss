@@ -37,6 +37,9 @@ header {
         &.notice {
           position: relative;
           margin-left: 70px;
+          @media screen and (max-width: 991px) {
+            margin-left: 30px;
+          }
           &.active {
             &::before {
               content: "";
@@ -160,10 +163,13 @@ header {
 
     .desktop__nav {
       @include flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       @include font-size(14px);
       background-color: $primary-color;
       position: relative;
+      @media screen and (max-width: 1210px) {
+        justify-content: space-between;
+      }
       &.active {
         position: fixed;
         top: 0;
@@ -171,57 +177,90 @@ header {
         justify-content: space-around;
         width: 100%;
       }
-      .nav__item.product {
-        .product__list {
-          @include flex;
-          flex-flow: column;
-          background-color: $primary-color;
-          visibility: hidden;
-          opacity: 0;
-          left: 0;
-          position: absolute;
-          bottom: -128px;
-          transform: translateY(-2em);
-          transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
-          @media screen and (max-width: 900px) {
-            bottom: -126px;
+      .nav__item {
+        &.product {
+          .product__list {
+            @include flex;
+            flex-flow: column;
+            background-color: $primary-color;
+            visibility: hidden;
+            opacity: 0;
+            left: 0;
+            position: absolute;
+            bottom: -128px;
+            transform: translateY(-2em);
+            transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+            @media screen and (max-width: 900px) {
+              bottom: -126px;
+            }
+            &.active {
+              visibility: visible;
+              opacity: 1;
+              transform: translateY(0%);
+              transition-delay: 0s, 0s, 0.3s;
+            }
+            .list__item {
+              padding: 5px;
+              margin: 0;
+              &::before {
+                content: ">";
+                color: #fff;
+                margin-right: 5px;
+              }
+            }
           }
-          &.active {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0%);
-            transition-delay: 0s, 0s, 0.3s;
-          }
-          .list__item {
-            padding: 5px;
-            margin: 0;
-            &::before {
-              content: ">";
-              color: #fff;
-              margin-right: 5px;
+  
+          .product__title {
+            color: #fff;
+            @include flex;
+            padding-top: 5px;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              color: #000;
+            }
+            img {
+              margin-right: 10px;
+            }
+            @media screen and (max-width: 991px) {
+              align-items: center;
+              padding: 0;
             }
           }
         }
-
-        .product__title {
-          color: #fff;
-          @include flex;
-          padding-top: 5px;
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-          &:hover {
-            color: #000;
+        &.promote {
+          margin-left: 51px;
+          @media screen and (max-width: 1210px) {
+            margin: 0;
           }
-          img {
-            margin-right: 10px;
+        }
+        &.store {
+          margin-left: 68px;
+          @media screen and (max-width: 1210px) {
+            margin: 0;
           }
-          @media screen and (max-width: 991px) {
-            align-items: center;
-            padding: 0;
+        }
+        &.health {
+          margin-left: 54px;
+          @media screen and (max-width: 1210px) {
+            margin: 0;
+          }
+        }
+        &.intro {
+          margin-left: 74px;
+          @media screen and (max-width: 1210px) {
+            margin: 0;
+          }
+        }
+        &.quest {
+          margin-left: 98px;
+          @media screen and (max-width: 1210px) {
+            margin: 0;
           }
         }
       }
-
+      
       .nav__item {
         @include flex;
         align-items: center;
@@ -249,12 +288,12 @@ header {
       margin-bottom: 10px;
     }
 
-    .mobile__wrap {
+    .mobile__row {
       @include flex;
       width: 100%;
       justify-content: space-between;
       padding: 5px 0;
-      .wrap__menu-btn {
+      .row__menu-btn {
         background: none;
         i {
           width: 25px;
@@ -296,7 +335,7 @@ header {
 
       }
 
-      .wrap__menu-dropdown {
+      .row__menu-dropdown {
         background-color: $primary-color;
         position: absolute;
         top: 103px;
