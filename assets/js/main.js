@@ -22,7 +22,7 @@ $(document).ready(function () {
         $(".row__product-dropdown").removeClass('active');
     }
     //close mobile menu dropdown if click outside of search bar
-    if ($(e.target).closest(".menu-dropdown__search").length === 0) {
+    if ($(e.target).closest(".menu-dropdown__search").length === 0 && $(e.target).closest(".row__menu-btn").length === 0) {
         $(".row__menu-dropdown , .row__menu-btn").removeClass('active');
     }
 
