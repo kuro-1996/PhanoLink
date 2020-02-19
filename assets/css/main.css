@@ -7683,7 +7683,7 @@ header .header__desktop .desktop__main {
 }
 
 header .header__desktop .desktop__main img {
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 header .header__desktop .desktop__main .main__search {
