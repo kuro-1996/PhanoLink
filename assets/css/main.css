@@ -7859,7 +7859,7 @@ header .header__desktop .desktop__nav .nav__item.product .product__list {
   padding: 15px;
   left: -20px;
   position: absolute;
-  bottom: -168px;
+  bottom: -167px;
   -webkit-transform: translateY(-2em);
           transform: translateY(-2em);
   -webkit-border-top-left-radius: 0;
@@ -7880,13 +7880,13 @@ header .header__desktop .desktop__nav .nav__item.product .product__list {
 
 @media only screen and (max-width: 1160px) {
   header .header__desktop .desktop__nav .nav__item.product .product__list {
-    bottom: -164px;
+    bottom: -163px;
   }
 }
 
 @media only screen and (max-width: 900px) {
   header .header__desktop .desktop__nav .nav__item.product .product__list {
-    bottom: -160px;
+    bottom: -159px;
   }
 }
 
@@ -8809,19 +8809,20 @@ footer .footer__info .info__content .content__locate .locate__contact a {
 }
 
 footer .footer__info .info__content .content__assist {
-  width: calc(100% / 12 * 3);
-  padding: 14px 0 0 79px;
+  width: calc(100% / 12 * 2);
+  padding: 14px 0 0 41px;
 }
 
 @media screen and (max-width: 991px) {
   footer .footer__info .info__content .content__assist {
+    width: calc(100% / 12 * 3);
     padding-left: 20px;
   }
 }
 
 @media screen and (max-width: 767px) {
   footer .footer__info .info__content .content__assist {
-    padding-top: 20px;
+    padding: 20px 0 0 0;
   }
 }
 
@@ -8888,8 +8889,8 @@ footer .footer__info .info__content .content__assist a::before {
 }
 
 footer .footer__info .info__content .content__account {
-  width: calc(100% / 12 * 2.3);
-  padding: 14px 0 0 31px;
+  width: calc(100% / 12 * 2);
+  padding: 14px 0 0 99px;
 }
 
 @media screen and (max-width: 991px) {
@@ -8901,7 +8902,7 @@ footer .footer__info .info__content .content__account {
 
 @media screen and (max-width: 767px) {
   footer .footer__info .info__content .content__account {
-    padding-top: 20px;
+    padding: 20px 0 0 0;
   }
 }
 
@@ -8974,8 +8975,8 @@ footer .footer__info .info__content .content__account a::before {
 }
 
 footer .footer__info .info__content .content__social {
-  width: calc(100% / 12 * 2.7);
-  padding: 14px 0 0 19px;
+  width: calc(100% / 12 * 2);
+  padding: 14px 0 0 22px;
 }
 
 @media screen and (max-width: 991px) {

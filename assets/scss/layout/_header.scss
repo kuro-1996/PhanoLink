@@ -232,15 +232,15 @@ header {
             padding: 15px;
             left: -20px;
             position: absolute;
-            bottom: -168px;
+            bottom: -167px;
             transform: translateY(-2em);
             @include border-radius-separate(0,0,5px,5px);
             transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
             @media #{$info-tablet-horizontal} {
-              bottom: -164px;
+              bottom: -163px;
             }
             @media #{$info-tablet-vertical} {
-              bottom: -160px;
+              bottom: -159px;
             }
 
             &.active {
