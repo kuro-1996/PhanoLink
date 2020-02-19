@@ -13,7 +13,7 @@ header {
   }
 
   .header__desktop {
-    padding: 13px 15px 17px 15px;
+    padding: 14px 15px 17px 15px;
     @media screen and (max-width: 767px) {
       display: none;
     }
@@ -23,7 +23,7 @@ header {
       justify-content: flex-end;
       @include font-size(12.1px);
       line-height: 12.88px;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
 
       .info__item {
         @include flex;
@@ -97,18 +97,14 @@ header {
       @include flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 12px;
-
-      img {
-        margin-bottom: 4px;
-      }
+      margin-bottom: 16px;
 
       .main__search {
         width: 654px;
         height: 37px;
         @include border-radius(7px);
         overflow: hidden;
-        margin: 0 0 6px 14px;
+        margin: 0 0 2px 14px;
         @include flex;
         @media screen and (max-width: 1199px) {
           width: 500px;
@@ -154,7 +150,7 @@ header {
         @include border-radius(7px);
         @include font-size(12.18px);
         @include flex;
-        margin-bottom: 6px;
+        margin-bottom: 2px;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease-in-out;

@@ -7574,7 +7574,7 @@ header a:hover {
 }
 
 header .header__desktop {
-  padding: 13px 15px 17px 15px;
+  padding: 14px 15px 17px 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -7593,7 +7593,7 @@ header .header__desktop .desktop__info {
   font-size: 12.1px;
   font-size: 0.75625rem;
   line-height: 12.88px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 header .header__desktop .desktop__info .info__item {
@@ -7679,11 +7679,7 @@ header .header__desktop .desktop__main {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-bottom: 12px;
-}
-
-header .header__desktop .desktop__main img {
-  margin-bottom: 4px;
+  margin-bottom: 16px;
 }
 
 header .header__desktop .desktop__main .main__search {
@@ -7691,7 +7687,7 @@ header .header__desktop .desktop__main .main__search {
   height: 37px;
   border-radius: 7px;
   overflow: hidden;
-  margin: 0 0 6px 14px;
+  margin: 0 0 2px 14px;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -7759,7 +7755,7 @@ header .header__desktop .desktop__main .main__button {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
