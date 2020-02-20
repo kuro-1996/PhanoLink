@@ -2,13 +2,13 @@ header {
   background-color: $primary-color;
   width: 100%;
   z-index: 1;
-  @media screen and (max-width: 767px) {
+  @media #{$under-768} {
     position: fixed;
   }
   a {
     color: #fff;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    @include transition(all 0.3s ease-in-out);
     &:hover {
       color: #000;
     }
@@ -16,7 +16,7 @@ header {
 
   .header__desktop {
     padding: 14px 15px 17px 15px;
-    @media screen and (max-width: 767px) {
+    @media #{$under-768} {
       display: none;
     }
 
@@ -31,7 +31,7 @@ header {
         @include flex;
         align-items: center;
         margin-left: 65px;
-        @media screen and (max-width: 991px) {
+        @media #{$under-992} {
           margin-left: 30px;
         }
 
@@ -46,7 +46,7 @@ header {
         &.notice {
           position: relative;
           margin-left: 70px;
-          @media screen and (max-width: 991px) {
+          @media #{$under-992} {
             margin-left: 30px;
           }
 
@@ -107,10 +107,10 @@ header {
         overflow: hidden;
         margin: 0 0 2px 14px;
         @include flex;
-        @media screen and (max-width: 1199px) {
+        @media #{$under-1200} {
           width: 500px;
         }
-        @media screen and (max-width: 991px) {
+        @media #{$under-992} {
           width: 300px;
         }
 
@@ -133,7 +133,7 @@ header {
           @include flex;
           justify-content: center;
           align-items: center;
-          transition: all 0.3s ease-in-out;
+          @include transition(all 0.3s ease-in-out);
           &:hover {
             color: #000;
           }
@@ -157,8 +157,8 @@ header {
         margin-bottom: 2px;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease-in-out;
-        @media screen and (max-width: 1199px) {
+        @include transition(all 0.3s ease-in-out);
+        @media #{$under-1200} {
           width: 100px;
         }
         &:hover {
@@ -173,7 +173,7 @@ header {
 
           img {
             margin-right: 11px;
-            @media screen and (max-width: 1199px) {
+            @media #{$under-1200} {
               margin: 0 10px;
             }
           }
@@ -182,7 +182,7 @@ header {
         &.cart {
           position: relative;
           justify-content: flex-start;
-          @media screen and (max-width: 1199px) {
+          @media #{$under-1200} {
             justify-content: center;
           }
           // &:hover {
@@ -208,7 +208,7 @@ header {
 
           img {
             margin: 0 15px;
-            @media screen and (max-width: 1199px) {
+            @media #{$under-1200} {
               margin: 0 10px 0 0;
             }
           }
@@ -247,9 +247,9 @@ header {
             left: -20px;
             position: absolute;
             bottom: -167px;
-            transform: translateY(-2em);
+            @include transform(translateY(-2em));
             @include border-radius-separate(0,0,5px,5px);
-            transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+            @include transition(all 0.3s ease-in-out 0s, visibility 0s linear 0.3s);
             @media #{$info-tablet-horizontal} {
               bottom: -163px;
             }
@@ -260,8 +260,8 @@ header {
             &.active {
               visibility: visible;
               opacity: 1;
-              transform: translateY(0%);
-              transition-delay: 0s, 0s, 0.3s;
+              @include transform(translateY(0%));
+              @include css3-prefix(transition-delay,0s, 0s, 0.3s);
             }
 
             .list__item {
@@ -281,8 +281,8 @@ header {
             @include flex;
             align-items: center;
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            @media screen and (max-width: 991px) {
+            @include transition(all 0.3s ease-in-out);
+            @media #{$under-992} {
               align-items: center;
               padding: 0;
             }
@@ -335,7 +335,7 @@ header {
       .nav__item {
         @include flex;
         align-items: center;
-        @media screen and (max-width: 991px) {
+        @media #{$under-992} {
           width: calc(100% / 7);
         }
 
@@ -352,17 +352,17 @@ header {
     position: absolute;
     width: 100%;
     background-color: $primary-color;
-    transform: translateY(-100%);
-    transition: all .3s ease-in-out;
+    @include transform(translateY(-100%));
+    @include transition(all .3s ease-in-out);
     &.fixed {
       @include flex;
       opacity: 1;
       align-items: center;
       position: fixed;
-      transform: translateY(0) ;
+      @include transform(translateY(0));
       top: 0;
       left: 0;
-      @media screen and (max-width: 767px) {
+      @media #{$under-768} {
         display: none;
       }
     }
@@ -386,11 +386,11 @@ header {
         overflow: hidden;
         margin-left: 60px;
         @include flex;
-        @media screen and (max-width: 1199px) {
+        @media #{$under-1200} {
           width: 500px;
           margin-left: 50px;
         }
-        @media screen and (max-width: 991px) {
+        @media #{$under-992} {
           width: 300px;
           margin-left: 20px;
         }
@@ -414,7 +414,7 @@ header {
           @include flex;
           justify-content: center;
           align-items: center;
-          transition: all 0.3s ease-in-out;
+          @include transition(all 0.3s ease-in-out);
           &:hover {
             color: #000;
           }
@@ -439,8 +439,8 @@ header {
         @include flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease-in-out;
-        @media screen and (max-width: 1199px) {
+        @include transition(all 0.3s ease-in-out);
+        @media #{$under-1200} {
           width: 120px;
           margin-left: 20px;
         }
@@ -458,7 +458,7 @@ header {
         &.cart {
           position: relative;
           justify-content: flex-start;
-          @media screen and (max-width: 1199px) {
+          @media #{$under-1200} {
             justify-content: center;
           }
 
@@ -482,7 +482,7 @@ header {
           img {
             margin: 0 15px;
             
-            @media screen and (max-width: 1199px) {
+            @media #{$under-1200} {
               margin: 0 10px 0 0;
             }
           }
@@ -523,7 +523,7 @@ header {
           position: relative;
           display: block;
           margin-bottom: 4px;
-          transition: all .3s ease-in-out;
+          @include transition(all .3s ease-in-out);
 
           &.bot {
             margin: 0;
@@ -533,7 +533,7 @@ header {
         &.active {
           .top {
             margin: 0;
-            transform: translateY(3px) rotate(-45deg);
+            @include transform(translateY(3px) rotate(-45deg));
           }
 
           .mid {
@@ -542,7 +542,7 @@ header {
           }
 
           .bot {
-            transform: translateY(-3px) rotate(45deg);
+            @include transform(translateY(-3px) rotate(45deg));
           }
         }
       }
@@ -557,19 +557,19 @@ header {
         visibility: hidden; /* hides sub-menu */
         opacity: 0;
         z-index: 1;
-        transform: translateY(-2em);
-        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
-        @media screen and (max-width: 575px) {
-          transform: translateX(2em);
+        @include transform(translateY(-2em));
+        @include transition(all 0.3s ease-in-out 0s, visibility 0s linear 0.3s);
+        @media #{$under-575} {
+          @include transform(translateX(2em));
         }
 
         &.active {
           visibility: visible;
           opacity: 1;
-          transform: translateY(0%);
-          transition-delay: 0s, 0s, 0.3s;
-          @media screen and (max-width: 575px) {
-            transform: translateX(0%);
+          @include transform(translateY(0%));
+          @include css3-prefix(transition-delay,0s, 0s, 0.3s);
+          @media #{$under-575} {
+            @include transform(translateX(0%));
           }
         }
 
@@ -627,7 +627,7 @@ header {
             justify-content: center;
             padding: 5px;
             color: #8e8e8e;
-            transition: all .3s ease-in-out;
+            @include transition(all .3s ease-in-out);
             &:hover {
               color: #000;
             }
@@ -638,7 +638,7 @@ header {
           }
           .button__cart {
             position: relative;
-            margin-left: 10px;
+            margin-left: 18px;
 
             .cart__number {
               font-family: 'UTM Neo Sans Intel Bold';
@@ -729,7 +729,7 @@ header {
       cursor: pointer;
       color: #fff;
       align-items: center;
-      transition: all .3s ease-in-out;
+      @include transition(all .3s ease-in-out);
       &:hover {
         color: #000;
       }
@@ -751,19 +751,19 @@ header {
       z-index: 1;
       bottom: -135px;
       @include border-radius-separate(0,0,5px,5px);
-      transform: translateY(-2em);
-      transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
-      @media screen and (max-width: 575px) {
-        transform: translateX(-2em);
+      @include transform(translateY(-2em));
+      @include transition(all 0.3s ease-in-out 0s , visibility 0s linear 0.3s);
+      @media #{$under-575} {
+        @include transform(translateX(-2em));
       }
 
       &.active {
         visibility: visible;
         opacity: 1;
-        transform: translateY(0%);
-        transition-delay: 0s, 0s, 0.3s;
-        @media screen and (max-width: 575px) {
-          transform: translateX(0%);
+        @include transform(translateY(0%));
+        @include css3-prefix(transition-delay,0s, 0s, 0.3s);
+        @media #{$under-575} {
+          @include transform(translateX(0%));
         }
       }
 
@@ -795,7 +795,7 @@ header {
         color: #8c8c8d;
         @include font-size(11px);
         margin-right: 7px;
-        @media screen and (max-width: 767px) {
+        @media #{$under-768} {
           @include font-size(12px);
         }
         &:hover {

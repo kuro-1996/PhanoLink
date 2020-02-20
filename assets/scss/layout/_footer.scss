@@ -2,7 +2,7 @@ footer {
   .footer__commit {
     @include flex;
     padding: 5px 15px;
-    @media screen and (max-width: 575px) {
+    @media #{$under-575} {
       flex-flow: wrap;
       position: relative;
 
@@ -13,7 +13,7 @@ footer {
         width: 1px;
         background-color: #ccc;
         left: 50%;
-        transform: translate(-50%);
+        @include transform(translate(-50%));
       }
 
       &::after {
@@ -24,7 +24,7 @@ footer {
         background-color: #ccc;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        @include transform(translate(-50%,-50%));
       }
     }
 
@@ -40,7 +40,7 @@ footer {
       @include font-size(14.66px);
       color: #767676;
       padding: 17px 0 12px 0;
-      @media screen and (max-width: 575px) {
+      @media #{$under-575} {
         width: calc(100% / 2);
         border: none;
       }
@@ -62,10 +62,10 @@ footer {
     .container {
       @include flex;
       justify-content: space-between;
-      @media screen and (max-width: 1199px) {
+      @media #{$under-1200} {
         justify-content: space-around;
       }
-      @media screen and (max-width: 767px) {
+      @media #{$under-768} {
         flex-flow: column;
       }
     }
@@ -73,14 +73,14 @@ footer {
     .contact__item {
       @include flex;
       align-items: center;
-      @media screen and (max-width: 1199px) {
+      @media #{$under-1200} {
         flex-flow: column;
       }
 
       & > p {
         color: #fff;
         @include font-size(16.5px);
-        @media screen and (max-width: 1199px) {
+        @media #{$under-1200} {
           margin-bottom: 10px;
         }
       }
@@ -99,13 +99,13 @@ footer {
         text-decoration: none;
         color: #767676; 
         margin-left: 17px;
-        @media screen and (max-width: 1199px) {
+        @media #{$under-1200} {
           margin: 0;
         }
-        @media screen and (max-width: 767px) {
+        @media #{$under-768} {
           margin-bottom: 10px;
         }
-        @media screen and (max-width: 375px) {
+        @media #{$under-375} {
           width: 250px;
         }
 
@@ -124,11 +124,11 @@ footer {
         margin-left: 10px;
         width: 364px;
         overflow: hidden;
-        @media screen and (max-width: 1199px) {
+        @media #{$under-1200} {
           margin: 0;
           width: 324px;
         }
-        @media screen and (max-width: 375px) {
+        @media #{$under-375} {
           width: 250px;
           @include flex;
           justify-content: center;
@@ -140,7 +140,7 @@ footer {
           background: none;
           margin-left: 52px;
           padding: 0;
-          @media screen and (max-width: 375px) {
+          @media #{$under-375} {
             margin-left: 20px;
           }
         }
@@ -161,7 +161,7 @@ footer {
     .info__content {
       @include flex;
       margin-bottom: 81px;
-      @media screen and (max-width: 991px) {
+      @media #{$under-992} {
         flex-flow: wrap;
         margin-bottom: 50px;
       }
@@ -170,13 +170,13 @@ footer {
         color: #595959;
         @include font-size(16.5px);
         margin-bottom: 35px;
-        @media screen and (max-width: 991px) {
+        @media #{$under-992} {
           margin-bottom: 33px;
         }
-        @media screen and (max-width: 767px) {
+        @media #{$under-768} {
           margin-bottom: 31px;
         }
-        @media screen and (max-width: 575px) {
+        @media #{$under-575} {
           margin-bottom: 20px;
         }
       }
@@ -185,14 +185,14 @@ footer {
         width: calc(100% / 12 * 4);
         @include font-size(12.83px);
         color: #666666;
-        @media screen and (max-width: 991px) {
+        @media #{$under-992} {
           width: calc(100% / 12 * 5);
         }
-        @media screen and (max-width: 767px) {
+        @media #{$under-768} {
           @include font-size(14px);
           margin-bottom: 20px;
         }  
-        @media screen and (max-width: 575px) {
+        @media #{$under-575} {
           width: 100%;
           @include flex;
           margin: 0;
@@ -206,21 +206,21 @@ footer {
 
         .locate__address {
           margin-bottom: 19px;
-          @media screen and (max-width: 575px) {
+          @media #{$under-575} {
             text-align: center;
           }
 
           a {
             color: #666666;
             padding-right: 20px;
-            @media screen and (max-width: 575px) {
+            @media #{$under-575} {
               padding: 0;
             }
           }
         }
 
         .locate__contact {
-          @media screen and (max-width: 575px) {
+          @media #{$under-575} {
             text-align: center;
           }
 
@@ -234,18 +234,18 @@ footer {
       .content__assist {
         width: calc(100% / 12 * 2);
         padding: 14px 0 0 41px;
-        @media screen and (max-width: 1199px) {
+        @media #{$under-1200} {
           width: calc(100% / 12 * 3);
         }
-        @media screen and (max-width: 991px) {
+        @media #{$under-992} {
           padding-left: 40px;
         } 
-        @media screen and (max-width: 767px) {
+        @media #{$under-768} {
           padding: 20px 0 0 20px;
         }
-        @media screen and (max-width: 575px) {
+        @media #{$under-575} {
           width: 100%;
-          display: flex;
+          @include flex;
           flex-flow: column;
           padding-left: 0;
           align-items: center;
@@ -264,8 +264,8 @@ footer {
         a {
           @include font-size(12.83px);
           color: #727272;
-          transition: all .3s ease-in-out;
-          @media screen and (max-width: 767px) {
+          @include transition(all .3s ease-in-out);
+          @media #{$under-768} {
             @include font-size(14px);
           }
           &:hover {
@@ -273,7 +273,7 @@ footer {
 
             &::before {
               margin-right: 8px;
-              @media screen and (max-width: 575px) {
+              @media #{$under-575} {
                 margin-right: 5px;
               }
             }
@@ -284,7 +284,7 @@ footer {
             color: $primary-color;
             margin-right: 5px;
             font-weight: bold;
-            transition: all .3s ease-in-out;
+            @include transition(all .3s ease-in-out);
           }
         }
       }
@@ -292,23 +292,23 @@ footer {
       .content__account {
         width: calc(100% / 12 * 2);
         padding: 14px 0 0 99px;
-        @media screen and (max-width: 1199px) {
+        @media #{$under-1200} {
           padding-left: 50px;
         }
-        @media screen and (max-width: 767px) {
+        @media #{$under-768} {
           width: calc(100% / 12 * 3);
           padding: 20px 0 0 20px;
         }
-        @media screen and (max-width: 575px) {
+        @media #{$under-575} {
           width: 100%;
-          display: flex;
+          @include flex;
           padding-left: 0;
           flex-flow: column;
           align-items: center;
         }
 
         .account__list {
-          @media screen and (max-width: 575px) {
+          @media #{$under-575} {
             margin-right: 17px;
           }
 
@@ -324,8 +324,8 @@ footer {
         a {
           @include font-size(12.83px);
           color: #727272;
-          transition: all .3s ease-in-out;
-          @media screen and (max-width: 767px) {
+          @include transition(all .3s ease-in-out);
+          @media #{$under-768} {
             @include font-size(14px);
           }
           &:hover {
@@ -333,7 +333,7 @@ footer {
 
             &::before {
               margin-right: 8px;
-              @media screen and (max-width: 575px) {
+              @media #{$under-575} {
                 margin-right: 5px;
               }
             }
@@ -344,7 +344,7 @@ footer {
             color: $primary-color;
             margin-right: 5px;
             font-weight: bold;
-            transition: all .3s ease-in-out;
+            @include transition(all .3s ease-in-out);
           }
         }
       }
@@ -352,16 +352,16 @@ footer {
       .content__social {
         width: calc(100% / 12 * 2);
         padding: 14px 0 0 22px;
-        @media screen and (max-width: 1199px) {
+        @media #{$under-1200} {
           width: calc(100% / 12 * 3);
         }
-        @media screen and (max-width: 991px) {
+        @media #{$under-992} {
           width: calc(100% / 12 * 4);
           padding-left: 0;
         }
-        @media screen and (max-width: 575px) {
+        @media #{$under-575} {
           width: 100%;
-          display: flex;
+          @include flex;
           flex-flow: column;
           align-items: center;
           padding-top: 20px;
@@ -376,15 +376,15 @@ footer {
           
           &:hover {
             img {
-              transform: scale(1.1);
-              @media screen and (max-width: 575px) {
-                transform: unset;
+              @include transform(scale(1.1));
+              @media #{$under-575} {
+                @include transform(unset);
               }
             }
           }
 
           img {
-            transition: all .3s ease-in-out;
+            @include transition(all .3s ease-in-out);
           }
         }
       }
@@ -395,7 +395,7 @@ footer {
       align-items: center;
       position: relative;
       padding: 13px 0 15px 0;
-      @media screen and (max-width: 375px) {
+      @media #{$under-375} {
         flex-flow: column-reverse;
       }
 
@@ -407,15 +407,15 @@ footer {
         background-color: #ebebec;
         top: 0;
         left: 50%;
-        transform: translate(-50%);
+        @include transform(translate(-50%));
       }
 
       img {
         margin-right: 44px;
-        @media screen and (max-width: 575px) {
+        @media #{$under-575} {
           margin-right: 0;
         }
-        @media screen and (max-width: 375px) {
+        @media #{$under-375} {
           margin-bottom: 10px;
         }
       }

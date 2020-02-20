@@ -28,9 +28,10 @@ $(document).ready(function () {
   });
   
   $(window).scroll(function() {
+    // scroll over header's height
     if ($(window).scrollTop() > $('header').height())
-      $('.header__sub').addClass('fixed');
-    else if ($(window).scrollTop() <= $('header').height() + 50) 
-      $('.header__sub').removeClass('fixed');
+      $('.header__sub').addClass('fixed'); // show sub header
+    else if ($(window).scrollTop() <= $('header').height() + 50)
+      $('.header__sub').removeClass('fixed'); // hide sub header
   })
 })
