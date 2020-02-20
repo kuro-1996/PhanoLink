@@ -7792,7 +7792,7 @@ header .header__desktop .desktop__main .main__button.pill img {
 
 @media screen and (max-width: 1199px) {
   header .header__desktop .desktop__main .main__button.pill img {
-    margin-right: 10px;
+    margin: 0 10px;
   }
 }
 
@@ -7823,6 +7823,12 @@ header .header__desktop .desktop__main .main__button.cart .cart__noti-number {
   line-height: 24px;
   right: -12px;
   top: -7px;
+}
+
+@media only screen and (max-width: 1160px) {
+  header .header__desktop .desktop__main .main__button.cart .cart__noti-number {
+    line-height: 22px;
+  }
 }
 
 header .header__desktop .desktop__main .main__button.cart img {
@@ -8091,7 +8097,7 @@ header .header__sub .sub__main .main__search {
 @media screen and (max-width: 1199px) {
   header .header__sub .sub__main .main__search {
     width: 500px;
-    margin-left: 40px;
+    margin-left: 50px;
   }
 }
 
@@ -8168,7 +8174,8 @@ header .header__sub .sub__main .main__button {
 
 @media screen and (max-width: 1199px) {
   header .header__sub .sub__main .main__button {
-    width: 100px;
+    width: 120px;
+    margin-left: 20px;
   }
 }
 
@@ -8179,12 +8186,6 @@ header .header__sub .sub__main .main__button:hover {
 
 header .header__sub .sub__main .main__button.pill img {
   margin-right: 11px;
-}
-
-@media screen and (max-width: 1199px) {
-  header .header__sub .sub__main .main__button.pill img {
-    margin: 0 10px;
-  }
 }
 
 header .header__sub .sub__main .main__button.cart {
@@ -8214,6 +8215,12 @@ header .header__sub .sub__main .main__button.cart .cart__noti-number {
   line-height: 24px;
   right: -12px;
   top: -7px;
+}
+
+@media only screen and (max-width: 1160px) {
+  header .header__sub .sub__main .main__button.cart .cart__noti-number {
+    line-height: 22px;
+  }
 }
 
 header .header__sub .sub__main .main__button.cart img {
