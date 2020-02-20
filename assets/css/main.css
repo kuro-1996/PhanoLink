@@ -7514,6 +7514,7 @@ button {
   border: none;
   cursor: pointer;
   padding: 0;
+  font-family: 'UTM Neo Sans Intel';
 }
 
 input {
@@ -7557,9 +7558,14 @@ input:focus {
 
 header {
   background-color: #01adab;
-  position: fixed;
   width: 100%;
   z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    position: fixed;
+  }
 }
 
 header a {
@@ -7749,6 +7755,9 @@ header .header__desktop .desktop__main .main__button {
   height: 37px;
   border: none;
   color: #8e8e8e;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'UTM Neo Sans Intel';
   border-radius: 7px;
   font-size: 12.18px;
   font-size: 0.76125rem;
@@ -7772,8 +7781,9 @@ header .header__desktop .desktop__main .main__button {
   }
 }
 
-header .header__desktop .desktop__main .main__button.pill:hover {
-  color: #000;
+header .header__desktop .desktop__main .main__button:hover {
+  background-color: #fa434e;
+  color: #fff;
 }
 
 header .header__desktop .desktop__main .main__button.pill img {
@@ -7782,16 +7792,23 @@ header .header__desktop .desktop__main .main__button.pill img {
 
 @media screen and (max-width: 1199px) {
   header .header__desktop .desktop__main .main__button.pill img {
-    margin: 5px;
+    margin-right: 10px;
   }
 }
 
 header .header__desktop .desktop__main .main__button.cart {
   position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-header .header__desktop .desktop__main .main__button.cart:hover {
-  color: #000;
+@media screen and (max-width: 1199px) {
+  header .header__desktop .desktop__main .main__button.cart {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 header .header__desktop .desktop__main .main__button.cart .cart__noti-number {
@@ -7802,13 +7819,20 @@ header .header__desktop .desktop__main .main__button.cart .cart__noti-number {
   background-color: #fa434e;
   color: #fff;
   border-radius: 50%;
+  text-align: center;
   line-height: 24px;
   right: -12px;
   top: -7px;
 }
 
 header .header__desktop .desktop__main .main__button.cart img {
-  margin-right: 15px;
+  margin: 0 15px;
+}
+
+@media screen and (max-width: 1199px) {
+  header .header__desktop .desktop__main .main__button.cart img {
+    margin: 0 10px 0 0;
+  }
 }
 
 header .header__desktop .desktop__nav {
@@ -7933,7 +7957,7 @@ header .header__desktop .desktop__nav .nav__item.product .product__title:hover {
 }
 
 header .header__desktop .desktop__nav .nav__item.product .product__title img {
-  margin: 0 10px 4px 0;
+  margin-right: 10px;
 }
 
 header .header__desktop .desktop__nav .nav__item.promote {
@@ -8003,6 +8027,203 @@ header .header__desktop .desktop__nav .nav__item {
 
 header .header__desktop .desktop__nav .nav__item a {
   margin-left: 10px;
+}
+
+header .header__sub {
+  height: 56px;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #01adab;
+  -webkit-transform: translateY(-50%) scaleY(0);
+          transform: translateY(-50%) scaleY(0);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+header .header__sub.fixed {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  opacity: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  -webkit-transform: translateY(0) scaleY(1);
+          transform: translateY(0) scaleY(1);
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  header .header__sub.fixed {
+    display: none;
+  }
+}
+
+header .header__sub .container {
+  width: 100%;
+}
+
+header .header__sub .sub__main {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+}
+
+header .header__sub .sub__main > img {
+  height: 38px;
+  margin-top: 2px;
+}
+
+header .header__sub .sub__main .main__search {
+  width: 664px;
+  height: 40px;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-left: 60px;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+}
+
+@media screen and (max-width: 1199px) {
+  header .header__sub .sub__main .main__search {
+    width: 500px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header .header__sub .sub__main .main__search {
+    width: 300px;
+    margin-left: 20px;
+  }
+}
+
+header .header__sub .sub__main .main__search input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  color: #9a9a9a;
+  padding: 0 0 1px 17px;
+  font-size: 11px;
+  font-size: 0.6875rem;
+}
+
+header .header__sub .sub__main .main__search button {
+  width: 117px;
+  height: 100%;
+  border: none;
+  background-color: #e2e3e4;
+  color: #888888;
+  font-size: 12.18px;
+  font-size: 0.76125rem;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header .header__sub .sub__main .main__search button:hover {
+  color: #000;
+}
+
+header .header__sub .sub__main .main__search button img {
+  margin-right: 10px;
+}
+
+header .header__sub .sub__main .main__button {
+  width: 139px;
+  height: 40px;
+  border: none;
+  color: #8e8e8e;
+  background: #fff;
+  margin-left: 14px;
+  cursor: pointer;
+  font-family: 'UTM Neo Sans Intel Bold';
+  border-radius: 7px;
+  font-size: 12.18px;
+  font-size: 0.76125rem;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1199px) {
+  header .header__sub .sub__main .main__button {
+    width: 100px;
+  }
+}
+
+header .header__sub .sub__main .main__button:hover {
+  background-color: #fa434e;
+  color: #fff;
+}
+
+header .header__sub .sub__main .main__button.pill img {
+  margin-right: 11px;
+}
+
+@media screen and (max-width: 1199px) {
+  header .header__sub .sub__main .main__button.pill img {
+    margin: 0 10px;
+  }
+}
+
+header .header__sub .sub__main .main__button.cart {
+  position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media screen and (max-width: 1199px) {
+  header .header__sub .sub__main .main__button.cart {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+header .header__sub .sub__main .main__button.cart .cart__noti-number {
+  font-family: "UTM Neo Sans Intel Bold";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #fa434e;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  right: -12px;
+  top: -7px;
+}
+
+header .header__sub .sub__main .main__button.cart img {
+  margin: 0 15px;
+}
+
+@media screen and (max-width: 1199px) {
+  header .header__sub .sub__main .main__button.cart img {
+    margin: 0 10px 0 0;
+  }
 }
 
 header .header__mobile {

@@ -25,6 +25,11 @@ $(document).ready(function () {
     if ($(e.target).closest(".menu-dropdown__search").length === 0 && $(e.target).closest(".row__menu-btn").length === 0) {
         $(".row__menu-dropdown , .row__menu-btn").removeClass('active');
     }
-
   });
+  
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > $('header').height())
+      $('.header__sub').addClass('fixed');
+    else $('.header__sub').removeClass('fixed');
+  })
 })

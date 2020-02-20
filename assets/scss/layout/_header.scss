@@ -1,8 +1,10 @@
 header {
   background-color: $primary-color;
-  position: fixed;
   width: 100%;
   z-index: 1;
+  @media screen and (max-width: 767px) {
+    position: fixed;
+  }
   a {
     color: #fff;
     text-decoration: none;
@@ -49,7 +51,6 @@ header {
           }
 
           &.active {
-
             &::before {
               content: "";
               position: absolute;
@@ -147,6 +148,9 @@ header {
         height: 37px;
         border: none;
         color: #8e8e8e;
+        background: #fff;
+        cursor: pointer;
+        font-family: 'UTM Neo Sans Intel';
         @include border-radius(7px);
         @include font-size(12.18px);
         @include flex;
@@ -157,25 +161,33 @@ header {
         @media screen and (max-width: 1199px) {
           width: 100px;
         }
+        &:hover {
+          background-color: #fa434e;
+          color: #fff;
+        }
 
         &.pill {
-          &:hover {
-            color: #000;
-          }
+          // &:hover {
+          //   color: #000;
+          // }
 
           img {
             margin-right: 11px;
             @media screen and (max-width: 1199px) {
-              margin: 5px;
+              margin-right: 10px;
             }
           }
         }
 
         &.cart {
           position: relative;
-          &:hover {
-            color: #000;
+          justify-content: flex-start;
+          @media screen and (max-width: 1199px) {
+            justify-content: center;
           }
+          // &:hover {
+          //   color: #000;
+          // }
 
           .cart__noti-number {
             font-family: "UTM Neo Sans Intel Bold";
@@ -185,13 +197,17 @@ header {
             background-color: #fa434e;
             color: #fff;
             @include border-radius(50%);
+            text-align: center;
             line-height: 24px;
             right: -12px;
             top: -7px;
           }
 
           img {
-            margin-right: 15px;
+            margin: 0 15px;
+            @media screen and (max-width: 1199px) {
+              margin: 0 10px 0 0;
+            }
           }
         }
       }
@@ -216,7 +232,6 @@ header {
       }
 
       .nav__item {
-
         &.product {
 
           .product__list {
@@ -273,7 +288,7 @@ header {
             }
 
             img {
-              margin: 0 10px 4px 0;
+              margin-right: 10px;
             }
           }
         }
@@ -328,6 +343,149 @@ header {
     }
   }
 
+  .header__sub {
+    height: 56px;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    background-color: $primary-color;
+    transform: translateY(-50%) scaleY(0);
+    transition: all .3s ease-in-out;
+    &.fixed {
+      @include flex;
+      opacity: 1;
+      align-items: center;
+      position: fixed;
+      transform: translateY(0) scaleY(1);
+      top: 0;
+      left: 0;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    .sub__main {
+      @include flex;
+
+      & > img {
+        height: 38px;
+        margin-top: 2px;
+      }
+
+      .main__search {
+        width: 664px;
+        height: 40px;
+        @include border-radius(7px);
+        overflow: hidden;
+        margin-left: 60px;
+        @include flex;
+        @media screen and (max-width: 1199px) {
+          width: 500px;
+          margin-left: 40px;
+        }
+        @media screen and (max-width: 991px) {
+          width: 300px;
+          margin-left: 20px;
+        }
+
+        input {
+          height: 100%;
+          width: 100%;
+          border: none;
+          color: #9a9a9a;
+          padding: 0 0 1px 17px;
+          @include font-size(11px);
+        }
+
+        button {
+          width: 117px;
+          height: 100%;
+          border: none;
+          background-color: #e2e3e4;
+          color: #888888;
+          @include font-size(12.18px);
+          @include flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            color: #000;
+          }
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .main__button {
+        width: 139px;
+        height: 40px;
+        border: none;
+        color: #8e8e8e;
+        background: #fff;
+        margin-left: 14px;
+        cursor: pointer;
+        font-family: 'UTM Neo Sans Intel Bold';
+        @include border-radius(7px);
+        @include font-size(12.18px);
+        @include flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        @media screen and (max-width: 1199px) {
+          width: 100px;
+        }
+        &:hover {
+          background-color: #fa434e;
+          color: #fff;
+        }
+
+        &.pill {
+          img {
+            margin-right: 11px;
+            @media screen and (max-width: 1199px) {
+              margin: 0 10px;
+            }
+          }
+        }
+
+        &.cart {
+          position: relative;
+          justify-content: flex-start;
+          @media screen and (max-width: 1199px) {
+            justify-content: center;
+          }
+
+          .cart__noti-number {
+            font-family: "UTM Neo Sans Intel Bold";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #fa434e;
+            color: #fff;
+            @include border-radius(50%);
+            text-align: center;
+            line-height: 24px;
+            right: -12px;
+            top: -7px;
+          }
+
+          img {
+            margin: 0 15px;
+            
+            @media screen and (max-width: 1199px) {
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
   .header__mobile {
     @include flex;
     justify-content: space-between;
@@ -338,6 +496,7 @@ header {
     @media screen and (min-width: 768px) {
       display: none;
     }
+
     .mobile__logo {
       margin-bottom: 10px;
     }
@@ -360,6 +519,7 @@ header {
           display: block;
           margin-bottom: 4px;
           transition: all .3s ease-in-out;
+
           &.bot {
             margin: 0;
           }
@@ -370,10 +530,12 @@ header {
             margin: 0;
             transform: translateY(3px) rotate(-45deg);
           }
+
           .mid {
             margin: 0;
             width: 0;
           }
+
           .bot {
             transform: translateY(-3px) rotate(45deg);
           }
@@ -416,7 +578,6 @@ header {
             position: relative;
 
             &.active {
-
               &::before {
                 content: '';
                 position: absolute;
