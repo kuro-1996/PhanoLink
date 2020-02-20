@@ -30,6 +30,7 @@ $(document).ready(function () {
   $(window).scroll(function() {
     if ($(window).scrollTop() > $('header').height())
       $('.header__sub').addClass('fixed');
-    else $('.header__sub').removeClass('fixed');
+    else if ($(window).scrollTop() <= $('header').height() - $('.breadcrumb').height()) 
+      $('.header__sub').removeClass('fixed');
   })
 })

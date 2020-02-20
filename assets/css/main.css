@@ -8035,8 +8035,8 @@ header .header__sub {
   position: absolute;
   width: 100%;
   background-color: #01adab;
-  -webkit-transform: translateY(-50%) scaleY(0);
-          transform: translateY(-50%) scaleY(0);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -8050,8 +8050,8 @@ header .header__sub.fixed {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  -webkit-transform: translateY(0) scaleY(1);
-          transform: translateY(0) scaleY(1);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   top: 0;
   left: 0;
 }

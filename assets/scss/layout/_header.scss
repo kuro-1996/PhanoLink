@@ -349,14 +349,14 @@ header {
     position: absolute;
     width: 100%;
     background-color: $primary-color;
-    transform: translateY(-50%) scaleY(0);
+    transform: translateY(-100%);
     transition: all .3s ease-in-out;
     &.fixed {
       @include flex;
       opacity: 1;
       align-items: center;
       position: fixed;
-      transform: translateY(0) scaleY(1);
+      transform: translateY(0) ;
       top: 0;
       left: 0;
       @media screen and (max-width: 767px) {
