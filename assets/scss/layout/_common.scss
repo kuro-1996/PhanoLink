@@ -8,6 +8,9 @@ ul, ol, p {
 
 a {
   text-decoration: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 ul {

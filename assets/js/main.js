@@ -34,4 +34,15 @@ $(document).ready(function () {
     else if ($(window).scrollTop() <= $('header').height() + 50)
       $('.header__sub').removeClass('fixed'); // hide sub header
   })
+
+  $('.banner__slick').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed: 2000,
+    prevArrow: null,
+    nextArrow: null
+  })
 })

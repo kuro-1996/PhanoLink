@@ -364,6 +364,7 @@ header {
       @include transform(translateY(0));
       top: 0;
       left: 0;
+      z-index: 1;
       @media #{$info-screen-768} {
         display: none;
       }

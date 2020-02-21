@@ -1,3 +1,189 @@
 main {
   min-height: 1000px;
+  @media #{$info-screen-768} {
+    padding-top: 149px;
+  }
+  background-color: #ebebeb;
+
+  .category {
+    @include flex;
+    @include font-size(15.04px);
+    font-family: 'UTM Neo Sans Intel Bold';
+    justify-content: space-between;
+    margin-bottom: 15px;
+    @media #{$info-screen-992} {
+      flex-flow: wrap;
+      justify-content: center;
+    }
+    @media #{$info-screen-575} {
+      justify-content: space-evenly;
+    }
+
+    .category__item {
+      display: block;
+      @include flex;
+      flex-flow: column;
+      align-items: center;
+      color: #ffffff;
+      width: 207px;
+      height: 144px;
+      justify-content: center;
+      @include border-radius(25px);
+      @media #{$info-screen-1200} {
+        width: 180px;
+        height: 120px;
+      }
+      @media #{$info-screen-992} {
+        width: 207px;
+        height: 144px;
+      }
+      @media #{$info-screen-768} {
+        width: 165px;
+        height: 120px;
+      }
+      @media #{$info-screen-575} {
+        width: 150px;
+        height: 100px;
+      }
+      @media screen and (max-width: 530px) {
+        width: 100px;
+      }
+
+      &.medicine, &.product , &.tool {
+        @media #{$info-screen-992} {
+          margin-left: 20px;
+        }
+        @media screen and (max-width: 530px) {
+          margin-left: 50px;
+        }
+        @media screen and (max-width: 440px) {
+          margin-left: 20px;
+        }
+        @media #{$info-screen-375} {
+          margin: 0;
+        }
+      }
+
+      &.medicine, &.product, &.pill {
+        @media #{$info-screen-992} {
+          margin-bottom: 20px;
+        }
+      }
+
+      img {
+        margin-bottom: 6px;
+        @media #{$info-screen-575} {
+          margin: 0;
+        }
+      }
+
+      p {
+        @media #{$info-screen-575} {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .cart {
+    .cart__wrap {
+      background-color: #ffffff;
+      padding: 26px 32px 32px 32px;
+
+      .cart__header {
+        margin-bottom: 29px;
+
+        h4 {
+          @include font-size(19.71px);
+          color: #595959;
+          font-family: 'UTM Neo Sans Intel Bold';
+          line-height: 1.1;
+        }
+
+        p {
+          @include font-size(10.75px);
+          color: #7c7c7c;
+        }
+      }
+
+      .cart__info {
+        @include flex;
+        margin-bottom: 32px;
+        @media #{$info-screen-768} {
+          flex-flow: column;
+        }
+
+        .info__item {
+          width: calc(100% / 3);
+          @include flex;
+          flex-flow: column;
+          align-items: center;
+          white-space: pre-line;
+          text-align: center;
+          padding: 28px 20px 22px 20px;
+          @media #{$info-screen-768} {
+            width: auto;
+          }
+
+          img {
+            margin-bottom: 11px;
+          }
+
+          &.chat {
+            position: relative;
+
+            &::before , &::after {
+              content: '';
+              position: absolute;
+              width: 1px;
+              height: 100%;
+              background-color: #dfdfdf;
+              top: 0;
+            }
+
+            &::before {
+              left: 0;
+            }
+
+            &::after {
+              right: 0;
+            }
+
+            img {
+              margin-bottom: 9px;
+            }
+          }
+          
+          h5 {
+            @include font-size(19.71px);
+            color: #656565;
+            line-height: 1.2;
+            margin-bottom: 3px;
+          }
+
+          p {
+            color: #a4a4a4;
+            line-height: 1.2;
+            @media #{$info-screen-768} {
+              white-space: unset;
+            }
+          }
+        }
+      }
+
+      .cart__btn {
+        background-color: #fa434e;
+        @include font-size(13.51px);
+        color: #ffffff;
+        @include flex;
+        padding: 5px 14px 5px 13px;
+        @include border-radius(5px);
+        margin: 0 auto;
+
+        img {
+          margin-right: 9px;
+        }
+      }
+    }
+  }
 }
