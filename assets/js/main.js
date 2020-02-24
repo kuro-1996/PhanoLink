@@ -45,4 +45,39 @@ $(document).ready(function () {
     prevArrow: null,
     nextArrow: null
   })
+
+  $('.promote__slick').slick({
+    dots: true,
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed: 2000,
+    prevArrow: null,
+    nextArrow: null,
+  })
+
+  $('.main__slick').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed: 2000,
+    prevArrow: null,
+    nextArrow: null
+  })
+
+  $('.hot-brand__slick').slick({
+    dots: false,
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 9,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed: 2000,
+    prevArrow: '<i class="fas fa-chevron-left"></i>',
+    nextArrow: '<i class="fas fa-chevron-right"></i>'
+  })
 })
