@@ -95,6 +95,36 @@ footer {
         @include border-radius(25px);
       }
 
+      @include keyframes(phonering) {
+        0% {
+          transform:rotate(0) scale(1) skew(1deg)
+        }
+    
+        10% {
+          transform:rotate(-25deg) scale(1) skew(1deg)
+        }
+    
+        20% {
+          transform:rotate(25deg) scale(1) skew(1deg)
+        }
+    
+        30% {
+          transform:rotate(-25deg) scale(1) skew(1deg)
+        }
+    
+        40% {
+          transform:rotate(25deg) scale(1) skew(1deg)
+        }
+    
+        50% {
+          transform:rotate(0) scale(1) skew(1deg)
+        }
+    
+        100% {
+          transform:rotate(0) scale(1) skew(1deg)
+        }
+      }
+
       .item__detail {
         text-decoration: none;
         color: #767676; 
@@ -107,6 +137,10 @@ footer {
         }
         @media #{$info-screen-375} {
           width: 250px;
+        }
+
+        img {
+          animation: phonering 1s infinite linear;
         }
 
         p {

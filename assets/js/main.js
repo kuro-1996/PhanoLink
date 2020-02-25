@@ -29,19 +29,15 @@ $(document).ready(function () {
   
   $(window).scroll(function() {  
     // scroll over header's height
-    if ($(window).scrollTop() > $('header').height()) {
+    if ($(window).scrollTop() > $('header').height())
       $('.header__sub').addClass('fixed'); // show sub header
-      $('.chat-box-btn').show('slow');//show chat box button
-    }
 
-    else if ($(window).scrollTop() <= $('header').height() + 50) {
+    else if ($(window).scrollTop() <= $('header').height() + 50)
       $('.header__sub').removeClass('fixed'); // hide sub header
-      $('.chat-box-btn').hide('slow');//hide chat box button
-    }
       
-    if ($(window).scrollTop() + 893 > $('footer').offset().top)
+    if ($(window).scrollTop() + 883 > $('footer').offset().top)
       $('.chat-box-btn').addClass('active'); //make chat box button stay on top of footer
-    else if ($(window).scrollTop() + 893 <= $('footer').offset().top)
+    else if ($(window).scrollTop() + 883 <= $('footer').offset().top)
       $('.chat-box-btn').removeClass('active'); //chat box button back to fixed position
   })
 

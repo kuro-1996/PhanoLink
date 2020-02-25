@@ -216,13 +216,37 @@ main {
         margin: 0 auto;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &::after {
+          width: 0%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: $primary-color;
+          content: '';
+          position: absolute;
+          z-index: -1;
+          @include transition(all .3s ease-in-out);
+        }
 
         &:hover {
-          color: #282828;
+          color: #000000;
+
+          &::after {
+            width: 100%;
+          }
+
+          img { 
+            filter: invert(1);
+          }
         }
 
         img {
           margin-right: 9px;
+          @include transition(all .3s ease-in-out);
         }
     }
 
@@ -231,7 +255,7 @@ main {
   .promote {
     padding-bottom: 18px;
 
-    .promote__header {
+    .promote__head {
       padding: 24px 23px 24px 30px;
       @media #{$info-screen-768} {
         padding-left: 30px;
@@ -251,7 +275,7 @@ main {
       }
 
       .slick__item {
-        margin-left: 20px;
+        margin-left: 20.5px;
         
 
         img {
@@ -309,7 +333,7 @@ main {
     position: relative;
     padding-bottom: 80px;
 
-    .hot-product__header {
+    .hot-product__head {
       padding: 21px 23px 21px 36px;
       @media #{$info-screen-768} {
         padding-left: 30px;
@@ -459,7 +483,7 @@ main {
   }
 
   .non-prescription {
-    .non-prescription__header {
+    .non-prescription__head {
       padding: 17px 23px 14px 36px;
       @media #{$info-screen-768} {
         padding-left: 30px;
@@ -471,7 +495,7 @@ main {
   }
 
   .functional-food {
-    .functional-food__header {
+    .functional-food__head {
       padding: 15px 23px 13px 46px;
       @media #{$info-screen-768} {
         padding-left: 30px;
@@ -483,7 +507,7 @@ main {
   }
 
   .consumer-goods {
-    .consumer-goods__header {
+    .consumer-goods__head {
       padding: 15px 23px 13px 37px;
       @media #{$info-screen-768} {
         padding-left: 30px;
@@ -495,7 +519,7 @@ main {
   }
 
   .cosmetic {
-    .cosmetic__header {
+    .cosmetic__head {
       padding: 15px 23px 15px 37px;
       @media #{$info-screen-768} {
         padding-left: 30px;
@@ -507,7 +531,7 @@ main {
   }
 
   .tool {
-    .tool__header {
+    .tool__head {
       padding: 15px 23px 14px 36px;
       @media #{$info-screen-768} {
         padding-left: 30px;
@@ -524,7 +548,7 @@ main {
       padding: 20px 20px 30px 20px;
     }
 
-    .news__header {
+    .news__head {
       margin-bottom: 23px;
     }
 
@@ -684,6 +708,8 @@ main {
                 @include font-size(20.16px);
                 color: #535353;
                 @include transition(all .3s ease-in-out);
+                display: block;
+                margin-bottom: 4px;
 
                 &:hover {
                   color: $primary-color;
@@ -755,6 +781,7 @@ main {
       position: absolute;
       cursor: pointer;
       color: $primary-color;
+      @include transition(all .3s ease-in-out);
     }
 
     .fa-chevron-left {
@@ -764,14 +791,22 @@ main {
       @media screen and (max-width: 1250px) {
         left: -25px;
       }
+
+      &:hover {
+        left: -60px;
+      }
     }
 
     .fa-chevron-right {
       top: 50%;
       @include transform(translate(0,-50%));
-      right: -58px;
+      right: -54px;
       @media screen and (max-width: 1250px) {
         right: -25px;
+      }
+
+      &:hover {
+        right: -56px;
       }
     }
   }
@@ -782,13 +817,23 @@ main {
     right: 35px;
     bottom: 35px;
     z-index: 1;
-    display: none;
+
+    img {
+      @media #{$info-screen-575} {
+        height: 40px;
+      }
+    }
 
     &.active {
       position: absolute;
       right: 35px;
       bottom: 694px;
       z-index: 1;
+      @media #{$info-screen-768} {
+        position: fixed;
+        right: 35px;
+        bottom: 35px;
+      }
     }
   }
 }
