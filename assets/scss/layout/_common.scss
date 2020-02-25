@@ -1,6 +1,10 @@
 html {
   overflow-x: hidden;
 }
+
+body {
+  position: relative;
+}
 ul, ol, p {
   padding: 0;
   margin: 0;
@@ -65,11 +69,9 @@ input {
 
 section {
   margin-bottom: 17px;
-}
-
-.wrap {
   background-color: #ffffff;
 }
+
 
 .slick-slide {
   &:focus {
@@ -131,6 +133,9 @@ section {
 .product {
   @include flex;
   flex-flow: wrap;
+  @media #{$info-screen-375} {
+    margin: 0 20px;
+  }
 
   a {
     @include font-size(15px);
@@ -139,9 +144,6 @@ section {
     display: block;
     line-height: 1.1;
     margin-bottom: 2px;
-    &:hover {
-      color: $primary-color;
-    }
   }
 
   p {
@@ -169,14 +171,24 @@ section {
     @media #{$info-screen-375} {
       width: 100%;
     }
+
+    &:hover {
+      a {
+        color: $primary-color;
+      }
+
+      .header__product {
+        @include transform(translateY(-5px));
+      }
+    }
+
     &:last-child {
       &::before {
-        width: 300%;
+        @media #{$info-screen-992} {
+          width: 300%;
+        } 
         @media #{$info-screen-575} {
           width: 100%;
-        }
-        @media #{$info-screen-375} {
-          display: none;
         }
       }
     }
@@ -209,6 +221,9 @@ section {
       background-color: #f1f1f1;
       right: -1px;
       top: 0;
+      @media #{$info-screen-375} {
+        content: unset;
+      }
     }
 
     .item__header {
@@ -225,11 +240,17 @@ section {
       .header__freeship {
         top: 14px;
         right: 7px;
+        @media #{$info-screen-768} {
+          width: 30px;
+        }
       }
 
       .header__gift {
         right: 7px;
         top: 60px;
+        @media #{$info-screen-768} {
+          width: 30px;
+        }
       }
 
       .header__discount {
@@ -238,12 +259,14 @@ section {
       }
 
       .header__product {
+        @include transition(all .3s ease-in-out);
+
         @media #{$info-screen-1200} {
           height: 100px;
         }
-        @media #{$info-screen-575} {
-          height: 70px;
-        }
+        // @media #{$info-screen-575} {
+        //   height: 70px;
+        // }
         @media #{$info-screen-375} {
           height: 130px;
         }
