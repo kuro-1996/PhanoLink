@@ -1,3 +1,37 @@
-main {
-  min-height: 1000px;
+.chat-box-btn {
+  background-color: transparent;
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  z-index: 1;
+
+  img {
+    @media #{$info-screen-575} {
+      height: 40px;
+    }
+  }
+
+  &.active {
+    position: absolute;
+    right: 35px;
+    bottom: 694px;
+    z-index: 1;
+    @media #{$info-screen-1200} {
+      bottom: 725px;
+    }
+    @media #{$info-tablet-horizontal} {
+      bottom: 706px
+    }
+    @media #{$info-screen-992} {
+      bottom: 767px;
+    }
+    @media #{$info-tablet-vertical} {
+      bottom: 755px;
+    }
+    @media #{$info-screen-768} {
+      position: fixed;
+      right: 35px;
+      bottom: 35px;
+    }
+  }
 }

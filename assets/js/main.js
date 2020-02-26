@@ -27,11 +27,63 @@ $(document).ready(function () {
     }
   });
   
-  $(window).scroll(function() {
+  $(window).scroll(function() {  
     // scroll over header's height
     if ($(window).scrollTop() > $('header').height())
       $('.header__sub').addClass('fixed'); // show sub header
+
     else if ($(window).scrollTop() <= $('header').height() + 50)
       $('.header__sub').removeClass('fixed'); // hide sub header
+      
+    if ($(window).scrollTop() + 883 > $('footer').offset().top)
+      $('.chat-box-btn').addClass('active'); //make chat box button stay on top of footer
+    else if ($(window).scrollTop() + 883 <= $('footer').offset().top)
+      $('.chat-box-btn').removeClass('active'); //chat box button back to fixed position
+  })
+
+  $('.banner__slick').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed: 2000,
+    prevArrow: null,
+    nextArrow: null
+  })
+
+  $('.promote__slick').slick({
+    dots: true,
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed: 2000,
+    prevArrow: null,
+    nextArrow: null,
+  })
+
+  $('.main__slick').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed: 2000,
+    prevArrow: null,
+    nextArrow: null
+  })
+
+  $('.hot-brand__slick').slick({
+    dots: false,
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 9,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed: 2000,
+    prevArrow: '<i class="fas fa-chevron-left"></i>',
+    nextArrow: '<i class="fas fa-chevron-right"></i>'
   })
 })

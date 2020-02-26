@@ -1,7 +1,7 @@
 header {
   background-color: $primary-color;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   @media #{$info-screen-768} {
     position: fixed;
   }
@@ -16,6 +16,8 @@ header {
 
   .header__desktop {
     padding: 14px 15px 17px 15px;
+    position: relative;
+    z-index: 1;
     @media #{$info-screen-768} {
       display: none;
     }
@@ -26,6 +28,7 @@ header {
       @include font-size(12.1px);
       line-height: 12.88px;
       margin-bottom: 5px;
+      font-family: 'UTM Neo Sans Intel Bold';
 
       .info__item {
         @include flex;
@@ -77,6 +80,7 @@ header {
 
             &:last-child {
               @include font-size(11px);
+              font-family: 'UTM Neo Sans Intel';
             }
           }
         }
@@ -89,6 +93,9 @@ header {
         a {
           &:first-child {
             margin: -2px 0 2px 0;
+          }
+          &:last-child {
+            font-family: 'UTM Neo Sans Intel';
           }
         }
       }
@@ -121,6 +128,7 @@ header {
           color: #9a9a9a;
           padding: 0 0 1px 17px;
           @include font-size(11px);
+          font-family: 'UTM Neo Sans Intel Italic';
         }
 
         button {
@@ -134,6 +142,7 @@ header {
           justify-content: center;
           align-items: center;
           @include transition(all 0.3s ease-in-out);
+          font-family: 'UTM Neo Sans Intel Bold';
           &:hover {
             color: #000;
           }
@@ -150,7 +159,7 @@ header {
         color: #8e8e8e;
         background: #fff;
         cursor: pointer;
-        font-family: 'UTM Neo Sans Intel';
+        font-family: 'UTM Neo Sans Intel Bold';
         @include border-radius(7px);
         @include font-size(12.18px);
         @include flex;
@@ -166,13 +175,13 @@ header {
           color: #fff;
         }
 
-        &.pill {
-          // &:hover {
-          //   color: #000;
-          // }
+        p {
+          margin-bottom: 2px;
+        }
 
+        &.pill {
           img {
-            margin-right: 11px;
+            margin: 2px 11px 0 0;
             @media #{$info-screen-1200} {
               margin: 0 10px;
             }
@@ -185,12 +194,8 @@ header {
           @media #{$info-screen-1200} {
             justify-content: center;
           }
-          // &:hover {
-          //   color: #000;
-          // }
 
           .cart__noti-number {
-            font-family: "UTM Neo Sans Intel Bold";
             position: absolute;
             width: 24px;
             height: 24px;
@@ -207,7 +212,7 @@ header {
           }
 
           img {
-            margin: 0 15px;
+            margin: 1px 15px 0 15px;
             @media #{$info-screen-1200} {
               margin: 0 10px 0 0;
             }
@@ -218,25 +223,24 @@ header {
 
     .desktop__nav {
       @include flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       @include font-size(14.4px);
       background-color: $primary-color;
       position: relative;
-      @media screen and (max-width: 1210px) {
-        justify-content: space-between;
-      }
-
-      &.active {
-        position: fixed;
-        top: 0;
-        left: 0;
-        justify-content: space-around;
-        width: 100%;
-      }
+      font-family: 'UTM Neo Sans Intel Bold';
 
       .nav__item {
-        &.product {
+        @include flex;
+        align-items: center;
+        @media #{$info-screen-992} {
+          width: calc(100% / 7);
+        }
 
+        a {
+          margin-left: 10px;
+        }
+
+        &.product {
           .product__list {
             @include flex;
             flex-flow: column;
@@ -298,35 +302,30 @@ header {
         }
 
         &.promote {
-          margin-left: 48px;
           @media screen and (max-width: 1210px) {
             margin: 0;
           }
         }
 
         &.store {
-          margin-left: 66px;
           @media screen and (max-width: 1210px) {
             margin: 0;
           }
         }
 
         &.health {
-          margin-left: 53px;
           @media screen and (max-width: 1210px) {
             margin: 0;
           }
         }
 
         &.intro {
-          margin-left: 71px;
           @media screen and (max-width: 1210px) {
             margin: 0;
           }
         }
 
         &.quest {
-          margin-left: 96px;
           @media screen and (max-width: 1210px) {
             margin: 0;
           }
@@ -334,25 +333,17 @@ header {
       }
       
       .nav__item {
-        @include flex;
-        align-items: center;
-        @media #{$info-screen-992} {
-          width: calc(100% / 7);
-        }
-
-        a {
-          margin-left: 10px;
-        }
+        
       }
     }
   }
 
   .header__sub {
-    height: 56px;
     opacity: 0;
     position: absolute;
     width: 100%;
     z-index: 0;
+    padding: 3px 0;
     background-color: $primary-color;
     @include transform(translateY(-100%));
     @include transition(all .3s ease-in-out);
@@ -364,6 +355,7 @@ header {
       @include transform(translateY(0));
       top: 0;
       left: 0;
+      z-index: 2;
       @media #{$info-screen-768} {
         display: none;
       }
@@ -375,26 +367,21 @@ header {
 
     .sub__main {
       @include flex;
-
-      & > img {
-        height: 38px;
-        margin-top: 2px;
-      }
+      justify-content: space-between;
+      align-items: center;
 
       .main__search {
-        width: 664px;
-        height: 40px;
+        width: 654px;
+        height: 37px;
         @include border-radius(7px);
         overflow: hidden;
-        margin-left: 60px;
+        margin-left: 14px;
         @include flex;
         @media #{$info-screen-1200} {
           width: 500px;
-          margin-left: 50px;
         }
         @media #{$info-screen-992} {
           width: 300px;
-          margin-left: 20px;
         }
 
         input {
@@ -404,6 +391,7 @@ header {
           color: #9a9a9a;
           padding: 0 0 1px 17px;
           @include font-size(11px);
+          font-family: 'UTM Neo Sans Intel Italic';
         }
 
         button {
@@ -417,6 +405,7 @@ header {
           justify-content: center;
           align-items: center;
           @include transition(all 0.3s ease-in-out);
+          font-family: 'UTM Neo Sans Intel Bold';
           &:hover {
             color: #000;
           }
@@ -428,12 +417,11 @@ header {
       }
 
       .main__button {
-        width: 139px;
-        height: 40px;
+        width: 134px;
+        height: 37px;
         border: none;
         color: #8e8e8e;
         background: #fff;
-        margin-left: 14px;
         cursor: pointer;
         font-family: 'UTM Neo Sans Intel Bold';
         @include border-radius(7px);
@@ -443,17 +431,23 @@ header {
         justify-content: center;
         @include transition(all 0.3s ease-in-out);
         @media #{$info-screen-1200} {
-          width: 120px;
-          margin-left: 20px;
+          width: 100px;
         }
         &:hover {
           background-color: #fa434e;
           color: #fff;
         }
 
+        p {
+          margin-bottom: 2px;
+        }
+
         &.pill {
           img {
-            margin-right: 11px;
+            margin: 2px 11px 0 0;
+            @media #{$info-screen-1200} {
+              margin: 0 10px;
+            }
           }
         }
 
@@ -482,7 +476,7 @@ header {
           }
 
           img {
-            margin: 0 15px;
+            margin: 1px 15px 0 15px;
             
             @media #{$info-screen-1200} {
               margin: 0 10px 0 0;
@@ -498,6 +492,7 @@ header {
     justify-content: space-between;
     padding: 10px 15px;
     position: relative;
+    z-index: 2;
     flex-flow: column;
     align-items: center;
     @media screen and (min-width: 768px) {
@@ -561,6 +556,7 @@ header {
         opacity: 0;
         @include transform(translateY(-2em));
         @include transition(all 0.3s ease-in-out 0s, visibility 0s linear 0.3s);
+        font-family: 'UTM Neo Sans Intel Bold';
         @media #{$info-screen-575} {
           @include transform(translateX(2em));
         }
@@ -620,6 +616,7 @@ header {
         .menu-dropdown__button {
           @include flex;
           margin-bottom: 15px;
+          font-family: 'UTM Neo Sans Intel Bold';
 
           button {
             border: none;
@@ -643,7 +640,6 @@ header {
             margin-left: 18px;
 
             .cart__number {
-              font-family: 'UTM Neo Sans Intel Bold';
               @include font-size(12px);
               position: absolute;
               width: 22px;
@@ -675,6 +671,7 @@ header {
             padding-left: 10px;
             width: 100%;
             @include font-size(12px);
+            font-family: 'UTM Neo Sans Intel Italic';
           }
         }
         .menu-dropdown__nav {
@@ -732,6 +729,7 @@ header {
       color: #fff;
       align-items: center;
       @include transition(all .3s ease-in-out);
+      font-family: 'UTM Neo Sans Intel Bold';
       &:hover {
         color: #000;
       }
@@ -751,7 +749,8 @@ header {
       position: absolute;
       padding: 15px;
       left: 0;
-      bottom: -135px;
+      bottom: -134px;
+      font-family: 'UTM Neo Sans Intel Bold';
       @include border-radius-separate(0,0,5px,5px);
       @include transform(translateY(-2em));
       @include transition(all 0.3s ease-in-out 0s , visibility 0s linear 0.3s);

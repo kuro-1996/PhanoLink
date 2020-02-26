@@ -1,6 +1,10 @@
 html {
   overflow-x: hidden;
 }
+
+body {
+  position: relative;
+}
 ul, ol, p {
   padding: 0;
   margin: 0;
@@ -8,6 +12,9 @@ ul, ol, p {
 
 a {
   text-decoration: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 ul {
@@ -31,7 +38,7 @@ button {
   border: none;
   cursor: pointer;
   padding: 0;
-  font-family: 'UTM Neo Sans Intel';
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 input {
@@ -59,3 +66,16 @@ input {
     max-width: 1170px;
   } 
 }
+
+section {
+  margin-bottom: 17px;
+  background-color: #ffffff;
+}
+
+
+.slick-slide {
+  &:focus {
+    outline: none;
+  }
+}
+
