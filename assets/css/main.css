@@ -8242,6 +8242,7 @@ header .header__mobile {
           justify-content: space-between;
   padding: 10px 15px;
   position: relative;
+  z-index: 2;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
