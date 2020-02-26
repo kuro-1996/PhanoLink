@@ -7,7 +7,8 @@
       @include flex;
       align-items: center;
       @include font-size(20.17px);
-      color: #505050;
+			color: #505050;
+			font-family: 'UTM Neo Sans Intel Bold';
       
       img {
         margin-right: 8px;
@@ -69,14 +70,16 @@
     p {
       color: #e95566;
       @include font-size(15px);
-      line-height: 1.1;
+			line-height: 1.1;
+			font-family: 'UTM Neo Sans Intel Bold';
     }
   
     .footer__discount {
       @include font-size(13px);
       color: #c2c2c2;
       text-decoration: line-through;
-      line-height: 1.7;
+			line-height: 1.7;
+			font-family: 'UTM Neo Sans Intel';
     }
   
     .product__item {
@@ -763,7 +766,6 @@ main {
   
           h5 {
             @include font-size(20.17px);
-            font-family: 'UTM Neo Sans Intel Bold';
             color: #535353;
             line-height: 1;
           }
@@ -771,7 +773,8 @@ main {
           p {
             @include font-size(16.5px);
             color: #848484;
-            line-height: 1;    
+						line-height: 1;   
+						font-family: 'UTM Neo Sans Intel'; 
           }
         }
   
@@ -1046,7 +1049,8 @@ main {
   
               p {
                 @include font-size(13.41px);
-                color: #282828;
+								color: #282828;
+								font-family: 'UTM Neo Sans Intel Italic';
               }
             }
           }
@@ -1124,7 +1128,8 @@ main {
                   color: #535353;
                   @include transition(all .3s ease-in-out);
                   display: block;
-                  margin-bottom: 4px;
+									margin-bottom: 4px;
+									font-family: 'UTM Neo Sans Intel Bold';
   
                   &:hover {
                     color: $primary-color;
@@ -1134,7 +1139,8 @@ main {
                 p {
                   @include font-size(10.7px);
                   color: #777777;
-                  line-height: 1.1;
+									line-height: 1.1;
+									font-family: 'UTM Neo Sans Intel Italic';
                 }
               }
             }
@@ -1161,7 +1167,9 @@ main {
       .hot-brand__title {
         padding: 20px 0 19px 35px;
         @include flex;
-        align-items: center;
+				align-items: center;
+				font-family: 'UTM Neo Sans Intel Bold';
+				color: #676767;
         @media #{$info-screen-768} {
           padding-left: 30px;
         }

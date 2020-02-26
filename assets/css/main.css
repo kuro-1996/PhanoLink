@@ -7522,7 +7522,7 @@ button {
   border: none;
   cursor: pointer;
   padding: 0;
-  font-family: 'UTM Neo Sans Intel';
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 input {
@@ -7619,6 +7619,7 @@ header .header__desktop .desktop__info {
   font-size: 0.75625rem;
   line-height: 12.88px;
   margin-bottom: 5px;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 header .header__desktop .desktop__info .info__item {
@@ -7678,6 +7679,7 @@ header .header__desktop .desktop__info .info__item.notice a {
 header .header__desktop .desktop__info .info__item.notice a:last-child {
   font-size: 11px;
   font-size: 0.6875rem;
+  font-family: 'UTM Neo Sans Intel';
 }
 
 header .header__desktop .desktop__info .item__account-log {
@@ -7692,6 +7694,10 @@ header .header__desktop .desktop__info .item__account-log {
 
 header .header__desktop .desktop__info .item__account-log a:first-child {
   margin: -2px 0 2px 0;
+}
+
+header .header__desktop .desktop__info .item__account-log a:last-child {
+  font-family: 'UTM Neo Sans Intel';
 }
 
 header .header__desktop .desktop__main {
@@ -7738,6 +7744,7 @@ header .header__desktop .desktop__main .main__search input {
   padding: 0 0 1px 17px;
   font-size: 11px;
   font-size: 0.6875rem;
+  font-family: 'UTM Neo Sans Intel Italic';
 }
 
 header .header__desktop .desktop__main .main__search button {
@@ -7759,6 +7766,7 @@ header .header__desktop .desktop__main .main__search button {
           align-items: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 header .header__desktop .desktop__main .main__search button:hover {
@@ -7776,7 +7784,7 @@ header .header__desktop .desktop__main .main__button {
   color: #8e8e8e;
   background: #fff;
   cursor: pointer;
-  font-family: 'UTM Neo Sans Intel';
+  font-family: 'UTM Neo Sans Intel Bold';
   border-radius: 7px;
   font-size: 12.18px;
   font-size: 0.76125rem;
@@ -7835,7 +7843,6 @@ header .header__desktop .desktop__main .main__button.cart {
 }
 
 header .header__desktop .desktop__main .main__button.cart .cart__noti-number {
-  font-family: "UTM Neo Sans Intel Bold";
   position: absolute;
   width: 24px;
   height: 24px;
@@ -7875,6 +7882,7 @@ header .header__desktop .desktop__nav {
   font-size: 0.9rem;
   background-color: #01adab;
   position: relative;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 header .header__desktop .desktop__nav .nav__item {
@@ -8108,6 +8116,7 @@ header .header__sub .sub__main .main__search input {
   padding: 0 0 1px 17px;
   font-size: 11px;
   font-size: 0.6875rem;
+  font-family: 'UTM Neo Sans Intel Italic';
 }
 
 header .header__sub .sub__main .main__search button {
@@ -8129,6 +8138,7 @@ header .header__sub .sub__main .main__search button {
           align-items: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 header .header__sub .sub__main .main__search button:hover {
@@ -8146,7 +8156,7 @@ header .header__sub .sub__main .main__button {
   color: #8e8e8e;
   background: #fff;
   cursor: pointer;
-  font-family: 'UTM Neo Sans Intel';
+  font-family: 'UTM Neo Sans Intel Bold';
   border-radius: 7px;
   font-size: 12.18px;
   font-size: 0.76125rem;
@@ -8338,6 +8348,7 @@ header .header__mobile .mobile__row .row__menu-dropdown {
   transform: translateY(-2em);
   -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 @media only screen and (max-width: 575px) {
@@ -8428,6 +8439,7 @@ header .header__mobile .mobile__row .row__menu-dropdown .menu-dropdown__button {
   display: -webkit-box;
   display: flex;
   margin-bottom: 15px;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 header .header__mobile .mobile__row .row__menu-dropdown .menu-dropdown__button button {
@@ -8462,7 +8474,6 @@ header .header__mobile .mobile__row .row__menu-dropdown .menu-dropdown__button .
 }
 
 header .header__mobile .mobile__row .row__menu-dropdown .menu-dropdown__button .button__cart .cart__number {
-  font-family: 'UTM Neo Sans Intel Bold';
   font-size: 12px;
   font-size: 0.75rem;
   position: absolute;
@@ -8498,6 +8509,7 @@ header .header__mobile .mobile__row .row__menu-dropdown .menu-dropdown__search i
   width: 100%;
   font-size: 12px;
   font-size: 0.75rem;
+  font-family: 'UTM Neo Sans Intel Italic';
 }
 
 header .header__mobile .mobile__row .row__menu-dropdown .menu-dropdown__nav {
@@ -8557,6 +8569,7 @@ header .header__mobile .row__product-btn {
           align-items: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 header .header__mobile .row__product-btn:hover {
@@ -8583,7 +8596,8 @@ header .header__mobile .row__product-dropdown {
   position: absolute;
   padding: 15px;
   left: 0;
-  bottom: -135px;
+  bottom: -134px;
+  font-family: 'UTM Neo Sans Intel Bold';
   -webkit-border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 5px;
@@ -9141,6 +9155,10 @@ footer .footer__info .info__content .content__locate .locate__address {
   }
 }
 
+footer .footer__info .info__content .content__locate .locate__address p {
+  font-family: 'UTM Neo Sans Intel Bold';
+}
+
 footer .footer__info .info__content .content__locate .locate__address a {
   color: #666666;
   padding-right: 20px;
@@ -9454,6 +9472,7 @@ footer .footer__info .info__license p {
   font-size: 9px;
   font-size: 0.5625rem;
   color: #6a6a6a;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 footer .footer__info .info__license p span {
@@ -9483,6 +9502,7 @@ footer .footer__info .info__license p span {
   font-size: 20.17px;
   font-size: 1.26063rem;
   color: #505050;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 .head .head__title img {
@@ -9561,6 +9581,7 @@ footer .footer__info .info__license p span {
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.1;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 .product .footer__discount {
@@ -9569,6 +9590,7 @@ footer .footer__info .info__license p span {
   color: #c2c2c2;
   text-decoration: line-through;
   line-height: 1.7;
+  font-family: 'UTM Neo Sans Intel';
 }
 
 .product .product__item {
@@ -10495,7 +10517,6 @@ main .hot-product .hot-product__head .title__detail {
 main .hot-product .hot-product__head .title__detail h5 {
   font-size: 20.17px;
   font-size: 1.26063rem;
-  font-family: 'UTM Neo Sans Intel Bold';
   color: #535353;
   line-height: 1;
 }
@@ -10505,6 +10526,7 @@ main .hot-product .hot-product__head .title__detail p {
   font-size: 1.03125rem;
   color: #848484;
   line-height: 1;
+  font-family: 'UTM Neo Sans Intel';
 }
 
 main .hot-product .hot-product__main {
@@ -10916,6 +10938,7 @@ main .news .news__content .content__left .left__item .item__info p {
   font-size: 13.41px;
   font-size: 0.83813rem;
   color: #282828;
+  font-family: 'UTM Neo Sans Intel Italic';
 }
 
 main .news .news__content .content__right {
@@ -11027,6 +11050,7 @@ main .news .news__content .content__right .right__info .info__item .item__detail
   transition: all 0.3s ease-in-out;
   display: block;
   margin-bottom: 4px;
+  font-family: 'UTM Neo Sans Intel Bold';
 }
 
 main .news .news__content .content__right .right__info .info__item .item__detail a:hover {
@@ -11038,6 +11062,7 @@ main .news .news__content .content__right .right__info .info__item .item__detail
   font-size: 0.66875rem;
   color: #777777;
   line-height: 1.1;
+  font-family: 'UTM Neo Sans Intel Italic';
 }
 
 main .hot-brand {
@@ -11068,6 +11093,8 @@ main .hot-brand .hot-brand__title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'UTM Neo Sans Intel Bold';
+  color: #676767;
 }
 
 @media only screen and (max-width: 767px) {

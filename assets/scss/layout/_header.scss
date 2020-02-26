@@ -28,6 +28,7 @@ header {
       @include font-size(12.1px);
       line-height: 12.88px;
       margin-bottom: 5px;
+      font-family: 'UTM Neo Sans Intel Bold';
 
       .info__item {
         @include flex;
@@ -79,6 +80,7 @@ header {
 
             &:last-child {
               @include font-size(11px);
+              font-family: 'UTM Neo Sans Intel';
             }
           }
         }
@@ -91,6 +93,9 @@ header {
         a {
           &:first-child {
             margin: -2px 0 2px 0;
+          }
+          &:last-child {
+            font-family: 'UTM Neo Sans Intel';
           }
         }
       }
@@ -123,6 +128,7 @@ header {
           color: #9a9a9a;
           padding: 0 0 1px 17px;
           @include font-size(11px);
+          font-family: 'UTM Neo Sans Intel Italic';
         }
 
         button {
@@ -136,6 +142,7 @@ header {
           justify-content: center;
           align-items: center;
           @include transition(all 0.3s ease-in-out);
+          font-family: 'UTM Neo Sans Intel Bold';
           &:hover {
             color: #000;
           }
@@ -152,7 +159,7 @@ header {
         color: #8e8e8e;
         background: #fff;
         cursor: pointer;
-        font-family: 'UTM Neo Sans Intel';
+        font-family: 'UTM Neo Sans Intel Bold';
         @include border-radius(7px);
         @include font-size(12.18px);
         @include flex;
@@ -189,7 +196,6 @@ header {
           }
 
           .cart__noti-number {
-            font-family: "UTM Neo Sans Intel Bold";
             position: absolute;
             width: 24px;
             height: 24px;
@@ -221,6 +227,7 @@ header {
       @include font-size(14.4px);
       background-color: $primary-color;
       position: relative;
+      font-family: 'UTM Neo Sans Intel Bold';
 
       .nav__item {
         @include flex;
@@ -384,6 +391,7 @@ header {
           color: #9a9a9a;
           padding: 0 0 1px 17px;
           @include font-size(11px);
+          font-family: 'UTM Neo Sans Intel Italic';
         }
 
         button {
@@ -397,6 +405,7 @@ header {
           justify-content: center;
           align-items: center;
           @include transition(all 0.3s ease-in-out);
+          font-family: 'UTM Neo Sans Intel Bold';
           &:hover {
             color: #000;
           }
@@ -414,7 +423,7 @@ header {
         color: #8e8e8e;
         background: #fff;
         cursor: pointer;
-        font-family: 'UTM Neo Sans Intel';
+        font-family: 'UTM Neo Sans Intel Bold';
         @include border-radius(7px);
         @include font-size(12.18px);
         @include flex;
@@ -547,6 +556,7 @@ header {
         opacity: 0;
         @include transform(translateY(-2em));
         @include transition(all 0.3s ease-in-out 0s, visibility 0s linear 0.3s);
+        font-family: 'UTM Neo Sans Intel Bold';
         @media #{$info-screen-575} {
           @include transform(translateX(2em));
         }
@@ -606,6 +616,7 @@ header {
         .menu-dropdown__button {
           @include flex;
           margin-bottom: 15px;
+          font-family: 'UTM Neo Sans Intel Bold';
 
           button {
             border: none;
@@ -629,7 +640,6 @@ header {
             margin-left: 18px;
 
             .cart__number {
-              font-family: 'UTM Neo Sans Intel Bold';
               @include font-size(12px);
               position: absolute;
               width: 22px;
@@ -661,6 +671,7 @@ header {
             padding-left: 10px;
             width: 100%;
             @include font-size(12px);
+            font-family: 'UTM Neo Sans Intel Italic';
           }
         }
         .menu-dropdown__nav {
@@ -718,6 +729,7 @@ header {
       color: #fff;
       align-items: center;
       @include transition(all .3s ease-in-out);
+      font-family: 'UTM Neo Sans Intel Bold';
       &:hover {
         color: #000;
       }
@@ -737,7 +749,8 @@ header {
       position: absolute;
       padding: 15px;
       left: 0;
-      bottom: -135px;
+      bottom: -134px;
+      font-family: 'UTM Neo Sans Intel Bold';
       @include border-radius-separate(0,0,5px,5px);
       @include transform(translateY(-2em));
       @include transition(all 0.3s ease-in-out 0s , visibility 0s linear 0.3s);

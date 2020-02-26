@@ -244,6 +244,10 @@ footer {
             text-align: center;
           }
 
+          p {
+            font-family: 'UTM Neo Sans Intel Bold';
+          }
+
           a {
             color: #666666;
             padding-right: 20px;
@@ -457,6 +461,7 @@ footer {
       p {
         @include font-size(9px);
         color: #6a6a6a;
+        font-family: 'UTM Neo Sans Intel Bold';
 
         span {
           @include font-size(10px);
